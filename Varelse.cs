@@ -10,7 +10,6 @@ class Varelse
 
         int result = Random.Shared.Next(0, 10) + intelligens;
 
-        // Make sure return value isn't higher than 20
         if (result > 20)
         {
             return 20;
@@ -24,13 +23,30 @@ class Varelse
 
     public int brottning()
     {
+        int result = Random.Shared.Next(0, 10) + tålighet + styrka;
 
-        return 1;
+      if (result > 20)
+        {
+            return 20;
+        }
+        else
+        {
+            return result;
+        }
     }
 
     public int armbrytning()
     {
 
-        return 1;
+       int result = Random.Shared.Next(0, 10) + styrka;
+
+      if (result > 25)
+        {
+            return 25;
+        }
+        else
+        {
+            return result;
+        }
     }
 }
